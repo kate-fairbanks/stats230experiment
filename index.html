@@ -1,57 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Reading Comprehension Quiz</title>
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div id="passage-section">
-    <p id="passage"></p>
-    <button id="start-quiz">Start Quiz</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reading Comprehension Quiz</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="passage-section">
+      <p id="passage"></p>
+      <button id="start-quiz">Start Quiz</button>
+    </div>
 
-  <div id="quiz-section" style="display: none;">
-    <form id="quiz-form">
-      <div class="question">
-        <p>1. What task did Jamie complete first?</p>
-        <label><input type="radio" name="q1" value="B"> Verified vehicle logs</label><br>
-        <label><input type="radio" name="q1" value="A"> Called the warehouse</label><br>
-        <label><input type="radio" name="q1" value="C"> Helped a customer</label><br>
-        <label><input type="radio" name="q1" value="D"> Delivered a shipment</label><br>
-      </div>
-      <div class="question">
-        <p>2. What was unusual about the delivery truck?</p>
-        <label><input type="radio" name="q2" value="B"> It went to the wrong building</label><br>
-        <label><input type="radio" name="q2" value="A"> It arrived late</label><br>
-        <label><input type="radio" name="q2" value="C"> It didn’t have paperwork</label><br>
-        <label><input type="radio" name="q2" value="D"> It was scheduled for the next day</label><br>
-      </div>
-      <div class="question">
-        <p>3. How did Jamie handle the mix-up?</p>
-        <label><input type="radio" name="q3" value="C"> Documented it and made a phone call</label><br>
-        <label><input type="radio" name="q3" value="A"> Ignored it</label><br>
-        <label><input type="radio" name="q3" value="B"> Reported it to HR</label><br>
-        <label><input type="radio" name="q3" value="D"> Sent the driver to another department</label><br>
-      </div>
-      <div class="question">
-        <p>4. Why was the waiting area mentioned?</p>
-        <label><input type="radio" name="q4" value="D"> To set a quiet tone</label><br>
-        <label><input type="radio" name="q4" value="A"> To describe how noisy it was</label><br>
-        <label><input type="radio" name="q4" value="B"> To explain a customer complaint</label><br>
-        <label><input type="radio" name="q4" value="C"> To show how busy Jamie was</label><br>
-      </div>
-      <div class="question">
-        <p>5. What wasn’t in the training manual?</p>
-        <label><input type="radio" name="q5" value="C"> Managing unexpected deliveries</label><br>
-        <label><input type="radio" name="q5" value="A"> Filing a report</label><br>
-        <label><input type="radio" name="q5" value="B"> Truck documentation</label><br>
-        <label><input type="radio" name="q5" value="D"> Handling phone calls</label><br>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-    <div id="results"></div>
-  </div>
-</body>
+    <div id="quiz-section" style="display: none">
+      <form id="quiz-form">
+        <div class="question">
+          <p>
+            1. What was one of the first tasks Jamie completed in the morning?
+          </p>
+          <label
+            ><input type="radio" name="q1" value="A" /> Speaking to a
+            customer</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="B" /> Reviewing vehicle
+            logs</label
+          ><br />
+          <!--CORRECT-->
+          <label
+            ><input type="radio" name="q1" value="C" /> Taking inventory</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="D" /> Inspected a
+            delivery</label
+          ><br />
+        </div>
+        <div class="question">
+          <p>2. Why did Jamie have to contact the central warehouse?</p>
+          <label
+            ><input type="radio" name="q2" value="A" /> It went to the wrong
+            building</label
+          ><br />
+          <!--CORRECT-->
+          <label
+            ><input type="radio" name="q2" value="B" /> It arrived late</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="C" /> It didn’t have
+            paperwork</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="D" /> It was scheduled for the
+            next day</label
+          ><br />
+        </div>
+        <div class="question">
+          <p>
+            3. Who helped Jamie understand how to handle the system software?
+          </p>
+          <label
+            ><input type="radio" name="q3" value="A" /> The warehouse
+            manager</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="B" /> The dispatcher</label
+          ><br />
+          <!--CORRECT-->
+          <label
+            ><input type="radio" name="q3" value="C" /> A training
+            document</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="D" /> A driver from the
+            delivery</label
+          ><br />
+        </div>
+        <div class="question">
+          <p>4. What did Jamie observe about how the office operated?</p>
+          <label
+            ><input type="radio" name="q4" value="A" /> Everything followed a
+            strict checklist</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="B" /> The software automated
+            most tasks</label
+          ><br />
+          <label
+            ><input type="radio" name="q4" value="C" /> Informal routines and
+            experiences kept things running</label
+          ><br />
+          <!--CORRECT-->
+          <label
+            ><input type="radio" name="q4" value="D" /> To show how busy Jamie
+            was</label
+          ><br />
+        </div>
+        <div class="question">
+          <p>5. How did Jamie feel about the job at the end of the day?</p>
+          <label
+            ><input type="radio" name="q5" value="A" /> It was more complicated
+            than expected</label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="B" /> It seemed like too much
+            to learn</label
+          ><br />
+          <label
+            ><input type="radio" name="q5" value="C" /> It would take time and
+            consistency to learn</label
+          ><br />
+          <!--CORRECT-->
+          <label
+            ><input type="radio" name="q5" value="D" /> It didn't match the job
+            description</label
+          ><br />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="results"></div>
+    </div>
+  </body>
 </html>
