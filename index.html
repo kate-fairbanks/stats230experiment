@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reading Comprehension Quiz</title>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="passage-section">
+    <p id="passage"></p>
+    <button id="start-quiz">Start Quiz</button>
+  </div>
+
+  <div id="quiz-section" style="display: none;">
+    <form id="quiz-form">
+      <div class="question">
+        <p>1. What task did Jamie complete first?</p>
+        <label><input type="radio" name="q1" value="B"> Verified vehicle logs</label><br>
+        <label><input type="radio" name="q1" value="A"> Called the warehouse</label><br>
+        <label><input type="radio" name="q1" value="C"> Helped a customer</label><br>
+        <label><input type="radio" name="q1" value="D"> Delivered a shipment</label><br>
+      </div>
+      <div class="question">
+        <p>2. What was unusual about the delivery truck?</p>
+        <label><input type="radio" name="q2" value="B"> It went to the wrong building</label><br>
+        <label><input type="radio" name="q2" value="A"> It arrived late</label><br>
+        <label><input type="radio" name="q2" value="C"> It didn’t have paperwork</label><br>
+        <label><input type="radio" name="q2" value="D"> It was scheduled for the next day</label><br>
+      </div>
+      <div class="question">
+        <p>3. How did Jamie handle the mix-up?</p>
+        <label><input type="radio" name="q3" value="C"> Documented it and made a phone call</label><br>
+        <label><input type="radio" name="q3" value="A"> Ignored it</label><br>
+        <label><input type="radio" name="q3" value="B"> Reported it to HR</label><br>
+        <label><input type="radio" name="q3" value="D"> Sent the driver to another department</label><br>
+      </div>
+      <div class="question">
+        <p>4. Why was the waiting area mentioned?</p>
+        <label><input type="radio" name="q4" value="D"> To set a quiet tone</label><br>
+        <label><input type="radio" name="q4" value="A"> To describe how noisy it was</label><br>
+        <label><input type="radio" name="q4" value="B"> To explain a customer complaint</label><br>
+        <label><input type="radio" name="q4" value="C"> To show how busy Jamie was</label><br>
+      </div>
+      <div class="question">
+        <p>5. What wasn’t in the training manual?</p>
+        <label><input type="radio" name="q5" value="C"> Managing unexpected deliveries</label><br>
+        <label><input type="radio" name="q5" value="A"> Filing a report</label><br>
+        <label><input type="radio" name="q5" value="B"> Truck documentation</label><br>
+        <label><input type="radio" name="q5" value="D"> Handling phone calls</label><br>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="results"></div>
+  </div>
+</body>
+</html>
