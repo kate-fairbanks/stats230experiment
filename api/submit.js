@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).send('Method Not Allowed');
+  if (req.method !== "POST") {
+    return res.status(405).send("Method Not Allowed");
   }
 
   try {
@@ -8,11 +8,14 @@ export default async function handler(req, res) {
 
     console.log("Received data:", data); // 🔍 Check what data you received
 
-    const response = await fetch("YOUR_GOOGLE_SCRIPT_URL_HERE", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
-    });
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbxPxNpbEnCQUy0wjdQPNrVM2SwrNvjox_VDjxExKKuawpWTEpPGbf4pobgtJOhsDRdC/exec",
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
 
     const result = await response.text();
     console.log("Google Apps Script response:", result);
