@@ -1,4 +1,3 @@
-// Make passage longer
 const passageText = `Jamie’s first day at the city’s transportation office started without much activity. The waiting area was mostly empty, and the morning checklist included reviewing vehicle logs, updating the driver schedule, and checking for overdue inspections. The process was straightforward, but the software used for scheduling was noticeably outdated and required extra patience.
 
 Midway through the morning, a delivery truck arrived at the wrong building. The shipment was intended for the central warehouse, not the administrative office. Jamie took down the information, called the warehouse to coordinate, and gave the driver directions to the correct site. It wasn’t complicated, but it required quick communication and attention to detail.
@@ -9,15 +8,20 @@ Throughout the day, Jamie noticed that while the office had its inefficiencies, 
 
 By the end of the shift, Jamie had handled a few minor issues, taken plenty of notes, and started to recognize some of the informal routines. It hadn’t been an overwhelming day, but it was clear that learning the job would take time and consistent effort.`;
 
-const fonts = ["Arial", "Times New Roman", "Comic Sans MS"];
-const sizes = [12, 16, 20];
+// Only Times New Roman or Comic Sans, and only 12 or 20 pt
+const fonts = ["Times New Roman", "Comic Sans MS"];
+const sizes = [12, 20];
 
 const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
 const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
 
-document.getElementById("passage").textContent = passageText;
-document.getElementById("passage").style.fontFamily = randomFont;
-document.getElementById("passage").style.fontSize = randomSize + "pt";
+document.getElementById("begin-reading").addEventListener("click", () => {
+  document.getElementById("welcome-section").style.display = "none";
+  document.getElementById("passage-section").style.display = "block";
+  document.getElementById("passage").textContent = passageText;
+  document.getElementById("passage").style.fontFamily = randomFont;
+  document.getElementById("passage").style.fontSize = randomSize + "pt";
+});
 
 document.getElementById("start-quiz").addEventListener("click", () => {
   document.getElementById("passage-section").style.display = "none";
@@ -26,7 +30,6 @@ document.getElementById("start-quiz").addEventListener("click", () => {
 
 document.getElementById("quiz-form").addEventListener("submit", function (e) {
   e.preventDefault();
-
   const data = {
     font: randomFont,
     size: randomSize,

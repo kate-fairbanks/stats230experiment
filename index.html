@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="passage-section">
+    <div id="welcome-section">
+      <h1>Welcome to the Reading Comprehension Quiz</h1>
+      <p>
+        You will be shown a short passage to read. After reading, you will take a 5-question quiz based on what you remember.
+        <strong>You will not be able to view the passage again during the quiz</strong>, so read carefully.
+      </p>
+      <button id="begin-reading">Begin</button>
+    </div>
+
+    <div id="passage-section" style="display: none;">
       <p id="passage"></p>
       <button id="start-quiz">Start Quiz</button>
     </div>
 
-    <div id="quiz-section" style="display: none">
+    <div id="quiz-section" style="display: none;">
       <form id="quiz-form">
-        <div class="question">
+       <div class="question">
           <p>
             1. What was one of the first tasks Jamie completed in the morning?
           </p>
