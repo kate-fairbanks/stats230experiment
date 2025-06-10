@@ -9,7 +9,7 @@ Throughout the day, Jamie noticed that while the office had its inefficiencies, 
 By the end of the shift, Jamie had handled a few minor issues, taken plenty of notes, and started to recognize some of the informal routines. It hadn’t been an overwhelming day, but it was clear that learning the job would take time and consistent effort.`;
 
 // Only Times New Roman or Comic Sans, and only 12 or 20 pt
-const fonts = ["Times New Roman", "Comic Sans MS"];
+const fonts = ["Times New Roman", "Arial"];
 const sizes = [12, 20];
 
 const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
