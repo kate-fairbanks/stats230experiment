@@ -5,123 +5,108 @@
     <title>Reading Comprehension Quiz</title>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="welcome-section">
       <h1>Welcome to the Reading Comprehension Quiz</h1>
       <p>
-        You will be shown a short passage to read. After reading, you will take a 5-question quiz based on what you remember.
-        <strong>You will not be able to view the passage again during the quiz</strong>, so read carefully.
+        You will be shown a short passage to read. After reading, you will take
+        a 5-question quiz based on what you remember. You will have 30 seconds to read the passage,
+        and 60 seconds to answer the questions.
+        <strong
+          >You will not be able to view the passage again during the
+          quiz</strong
+        >, so read carefully.
       </p>
       <button id="begin-reading">Begin</button>
     </div>
 
-    <div id="passage-section" style="display: none;">
+    <div id="passage-section" style="display: none">
+      <div
+        id="passage-timer"
+        style="font-weight: bold; margin-bottom: 10px"
+      ></div>
       <p id="passage"></p>
       <button id="start-quiz">Start Quiz</button>
     </div>
 
-    <div id="quiz-section" style="display: none;">
+    <div id="quiz-section" style="display: none">
+      <div id="quiz-timer" style="font-weight: bold; margin-bottom: 10px"></div>
       <form id="quiz-form">
-       <div class="question">
-          <p>
-            1. What was one of the first tasks Jamie completed in the morning?
-          </p>
-          <label
-            ><input type="radio" name="q1" value="A" /> Speaking to a
-            customer</label
+        <div class="question">
+          <p>1. What kind of tree is described in the passage?</p>
+          <label><input type="radio" name="q1" value="A" /> Pine</label><br />
+          <label><input type="radio" name="q1" value="B" /> Maple</label><br />
+          <label><input type="radio" name="q1" value="C" /> Oak</label><br />
+          <label><input type="radio" name="q1" value="D" /> Willow</label><br />
+        </div>
+        <div class="question">
+          <p>2. What do squirrels do around the tree?</p>
+          <label><input type="radio" name="q2" value="A" /> Build nests</label
           ><br />
-          <label
-            ><input type="radio" name="q1" value="B" /> Reviewing vehicle
-            logs</label
+          <label><input type="radio" name="q2" value="B" /> Bury acorns</label
           ><br />
-          <!--CORRECT-->
-          <label
-            ><input type="radio" name="q1" value="C" /> Taking inventory</label
+          <label><input type="radio" name="q2" value="C" /> Eat leaves</label
           ><br />
-          <label
-            ><input type="radio" name="q1" value="D" /> Inspected a
-            delivery</label
+          <label><input type="radio" name="q2" value="D" /> Climb fences</label
           ><br />
         </div>
         <div class="question">
-          <p>2. Why did Jamie have to contact the central warehouse?</p>
+          <p>3. Where do birds nest in the tree?</p>
           <label
-            ><input type="radio" name="q2" value="A" /> It went to the wrong
-            building</label
-          ><br />
-          <!--CORRECT-->
-          <label
-            ><input type="radio" name="q2" value="B" /> It arrived late</label
+            ><input type="radio" name="q3" value="A" /> On the lowest
+            branches</label
           ><br />
           <label
-            ><input type="radio" name="q2" value="C" /> It didn’t have
-            paperwork</label
+            ><input type="radio" name="q3" value="B" /> In holes in the
+            trunk</label
           ><br />
           <label
-            ><input type="radio" name="q2" value="D" /> It was scheduled for the
-            next day</label
-          ><br />
-        </div>
-        <div class="question">
-          <p>
-            3. Who helped Jamie understand how to handle the system software?
-          </p>
-          <label
-            ><input type="radio" name="q3" value="A" /> The warehouse
-            manager</label
+            ><input type="radio" name="q3" value="C" /> On the ground
+            nearby</label
           ><br />
           <label
-            ><input type="radio" name="q3" value="B" /> The dispatcher</label
-          ><br />
-          <!--CORRECT-->
-          <label
-            ><input type="radio" name="q3" value="C" /> A training
-            document</label
-          ><br />
-          <label
-            ><input type="radio" name="q3" value="D" /> A driver from the
-            delivery</label
+            ><input type="radio" name="q3" value="D" /> In its highest
+            boughs</label
           ><br />
         </div>
         <div class="question">
-          <p>4. What did Jamie observe about how the office operated?</p>
+          <p>4. What do children often do near the tree?</p>
           <label
-            ><input type="radio" name="q4" value="A" /> Everything followed a
-            strict checklist</label
+            ><input type="radio" name="q4" value="A" /> Read books
+            quietly</label
           ><br />
           <label
-            ><input type="radio" name="q4" value="B" /> The software automated
-            most tasks</label
+            ><input type="radio" name="q4" value="B" /> Play games under its
+            shade</label
           ><br />
           <label
-            ><input type="radio" name="q4" value="C" /> Informal routines and
-            experiences kept things running</label
+            ><input type="radio" name="q4" value="C" /> Water its roots</label
           ><br />
-          <!--CORRECT-->
           <label
-            ><input type="radio" name="q4" value="D" /> To show how busy Jamie
-            was</label
+            ><input type="radio" name="q4" value="D" /> Collect fallen
+            leaves</label
           ><br />
         </div>
         <div class="question">
-          <p>5. How did Jamie feel about the job at the end of the day?</p>
+          <p>5. How is the oak tree described in the last sentence?</p>
           <label
-            ><input type="radio" name="q5" value="A" /> It was more complicated
-            than expected</label
+            ><input type="radio" name="q5" value="A" /> A busy meeting
+            spot</label
           ><br />
           <label
-            ><input type="radio" name="q5" value="B" /> It seemed like too much
-            to learn</label
+            ><input type="radio" name="q5" value="B" /> A source of food</label
           ><br />
           <label
-            ><input type="radio" name="q5" value="C" /> It would take time and
-            consistency to learn</label
+            ><input type="radio" name="q5" value="C" /> A quiet guardian</label
           ><br />
-          <!--CORRECT-->
           <label
-            ><input type="radio" name="q5" value="D" /> It didn't match the job
-            description</label
+            ><input type="radio" name="q5" value="D" /> A giant
+            playground</label
           ><br />
         </div>
         <button type="submit">Submit</button>
