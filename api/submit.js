@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     console.log("Received data:", data); // Check what data you received
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbw37Y9-UFeIKPzvxEhRQOIwlm_hBhJLYugkzB_WQthjgSi6hhc6ItVeygUFCbxn4cZ8JA/exec",
+      "https://script.google.com/macros/s/AKfycbxaro3F35ZQlhJkm3jP8FWj91GQBWA5xI063CQJT7Y_J9bqyHxnAEQxjtSmYae3in1b7g/exec",
       {
         method: "POST",
         body: JSON.stringify(data),
